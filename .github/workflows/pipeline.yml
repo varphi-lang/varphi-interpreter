@@ -67,12 +67,10 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install Dependencies
+      - name: Install dependencies
         shell: bash
         run: |
-          uv venv
-          # Installing explicit dependencies ensures they exist in the venv
-          uv pip install pillow requests pyinstaller varphi-python varphi-python-dap .
+          uv sync --all-extras --dev
 
       - name: Create Logo Script
         shell: bash
