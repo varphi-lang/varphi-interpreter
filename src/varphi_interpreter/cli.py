@@ -37,6 +37,12 @@ def main_command(
         "--debug",
         help="Enable verbose step-by-step logging (Standard mode only).",
     ),
+    blank_char: str = typer.Option(
+        "_",
+        "--blank-char",
+        "-b",
+        help="Character representing a BLANK cell in input/output (Default: _).",
+    ),
     check: bool = typer.Option(
         False, "--check", help="Compile only to verify syntax (does not execute)."
     ),
@@ -54,24 +60,23 @@ def main_command(
 
     Compiles Varphi source code to Python in-memory and executes it immediately.
     Any extra arguments passed after the filename are forwarded to the program
-    (e.g., used for setting initial tape values in DAP mode).
+    (e.g., used for setting initial tape values).
     """
-    from varphi_python import VarphiToPythonCompiler
-    from varphi_python_dap import VarphiToPythonDAPCompiler
-    from varphi_devkit import VarphiSyntaxError
-
-    # Select the Compiler Backend
+    # Select the compiler backend
     if dap:
+        from vp2py import VarphiToPythonCompiler
         compiler = VarphiToPythonDAPCompiler()
         compiler.set_source_path(str(input_file))
         if debug:
             typer.echo("Warning: --debug flag is ignored in DAP mode.", err=True)
     else:
+        from vp2pydap import VarphiToPythonDAPCompiler
         compiler = VarphiToPythonCompiler()
         if debug:
             compiler.toggle_debug()
 
-    # Compile Source
+    # compile source
+    from varphi_devkit import VarphiSyntaxError
     try:
         source_code = input_file.read_text(encoding="utf-8")
         compiled_python_code = compiler.compile(source_code)
@@ -86,8 +91,9 @@ def main_command(
 
     # We construct a new argv.
     # argv[0] should be the script name (we fake it as the input file).
-    # argv[1:] should be the extra arguments passed by the user (e.g., --tapes 101).
-    fake_argv = [str(input_file)] + ctx.args
+    # We explicitly inject the intercepted --blank-char so the compiled code's argparse catches it.
+    # argv[3:] should be the extra arguments passed by the user.
+    fake_argv = [str(input_file), "--blank-char", blank_char] + ctx.args
 
     # Global scope for the executed code.
     execution_globals = {
