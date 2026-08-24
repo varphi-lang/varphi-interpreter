@@ -640,19 +640,19 @@ wheels = [
 
 [[package]]
 name = "varphi-devkit"
-version = "3.0.0"
+version = "3.0.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "antlr4-python3-runtime" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a5/51/d554b86c3dd2995427196fd299470435dd70043b93dd4dddd51f1bdbe394/varphi_devkit-3.0.0.tar.gz", hash = "sha256:bec3de97cf67b135d9626c04fd56784239e18d125e2360a5da3821b9b9d78517", size = 13579, upload-time = "2026-08-23T01:15:38.534Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f4/c7/caed370aff91c6ac9b29212e02c9d9c43cfff4cc8979b978b64ecc07d65e/varphi_devkit-3.0.1.tar.gz", hash = "sha256:f145f2198d70ee8b42227954bc4c28e376ad9ac4d22043c4b88caf85d19a79ab", size = 13587, upload-time = "2026-08-23T18:16:35.01Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/50/a3/f8814ad0084bc2f4283b91e74e92f37ceb4da04a7386d528dde9713c1df8/varphi_devkit-3.0.0-py3-none-any.whl", hash = "sha256:0d90cad661dcbed0761b39626e0d6ab21643703fc99716c8d540c88c04b8ba3b", size = 18084, upload-time = "2026-08-23T01:15:37.283Z" },
+    { url = "https://files.pythonhosted.org/packages/f0/f9/7530c54c713e14905db942665bdf83ad4102eb3e9788290d85c1670ba782/varphi_devkit-3.0.1-py3-none-any.whl", hash = "sha256:f46de2103884786618303a10be88985c59188aaedecd0d24a82b09434f1e0626", size = 18115, upload-time = "2026-08-23T18:16:33.959Z" },
 ]
 
 [[package]]
 name = "varphi-interpreter"
-version = "3.0.1"
+version = "3.0.2"
 source = { editable = "." }
 dependencies = [
     { name = "typer" },
@@ -672,8 +672,8 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "typer", specifier = ">=0.21.0" },
-    { name = "vp2py", specifier = ">=3.0.0" },
-    { name = "vp2pydap", specifier = ">=3.0.0" },
+    { name = "vp2py", specifier = ">=3.0.3" },
+    { name = "vp2pydap", specifier = ">=3.0.3" },
 ]
 
 [package.metadata.requires-dev]
@@ -696,27 +696,27 @@ wheels = [
 
 [[package]]
 name = "vp2py"
-version = "3.0.0"
+version = "3.0.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "typer" },
     { name = "varphi-devkit" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4c/5f/7dd7f3aa08c864997b6160bb97b10a65ddb145f8fd617dfa62adf8e61ce7/vp2py-3.0.0.tar.gz", hash = "sha256:15ac99e7fea3286b8c7c45c0ec6bb0d9618d520aa1a1b1bbf28939c5f5a5276c", size = 6446, upload-time = "2026-08-23T21:12:05.589Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cc/4b/9264c806c761f05b6c2932aac3b3b433b1dba2719eb5bc5e0916cf064a5a/vp2py-3.0.3.tar.gz", hash = "sha256:b45661e8af557732e744309c6d2e14936f0e378cf89550d81893fc3302ad0b40", size = 6628, upload-time = "2026-08-24T00:11:40.344Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/47/54/1c44a1da756fab6449d299d077df96605ff67a17f0269351b3048bd3e758/vp2py-3.0.0-py3-none-any.whl", hash = "sha256:56743054b084eb2a18b2d400173ff837ea62c6293fa5c0340bb583fb085c2bd9", size = 9043, upload-time = "2026-08-23T21:12:04.402Z" },
+    { url = "https://files.pythonhosted.org/packages/f2/35/ce7ada2289b645ad75f49138fdc6c89091868be0d3ac8b96ec9c659670d6/vp2py-3.0.3-py3-none-any.whl", hash = "sha256:2ec0f259493e3db8fd5ae5dddffc2ff33227976de29f9449f8edd470d10515c6", size = 9219, upload-time = "2026-08-24T00:11:39.339Z" },
 ]
 
 [[package]]
 name = "vp2pydap"
-version = "3.0.1"
+version = "3.0.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "typer" },
     { name = "varphi-devkit" },
     { name = "vp2py" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1b/9a/b422144693da58cb6c2554f36784b07326cf11fb8bc955dbeaca3e370f9a/vp2pydap-3.0.1.tar.gz", hash = "sha256:2e07235aad99f403e64186de8474585b719abd9153f25787883e656dfd36cd20", size = 5921, upload-time = "2026-08-23T22:50:15.905Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/5f/23/531a05ff8e5ba77e2b8f5bc45623e6d9f39dcf4f597b531d27600ad63ced/vp2pydap-3.0.3.tar.gz", hash = "sha256:f9f80d00110fe0fe6be373282009bb36edffe1e87c263b7d0e9ef574244c50eb", size = 5957, upload-time = "2026-08-24T00:12:58.985Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2a/3c/a9bb597ec3269e31447ff866e627f32619572c8e0bf9a344ed412b90dec2/vp2pydap-3.0.1-py3-none-any.whl", hash = "sha256:6e1b1549fb78e2c975336b823e2fdf25bbf5687b2dc954fd16d196345560ab11", size = 7819, upload-time = "2026-08-23T22:50:14.935Z" },
+    { url = "https://files.pythonhosted.org/packages/88/72/26ae19b6ca0546c14ab2c8235f159224f72773051004f422fec6f83903fc/vp2pydap-3.0.3-py3-none-any.whl", hash = "sha256:d0a41f6d186ccb9073e1ed6ddd6cb8b72dba5af076e4983e7e397e83ecfd70a5", size = 7820, upload-time = "2026-08-24T00:12:57.943Z" },
 ]
