@@ -1,6 +1,6 @@
 [project]
 name = "varphi-interpreter"
-version = "3.0.2"
+version = "4.0.0"
 description = "An all-in-one tool for compiling and interpreting Varphi programs."
 readme = "README.md"
 authors = [
@@ -8,9 +8,9 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "typer>=0.21.0",
-    "vp2py>=3.0.3",
-    "vp2pydap>=3.0.3",
+    "typer",
+    "vp2py>=4.0.0",
+    "vp2pydap>=4.0.1",
 ]
 
 [project.scripts]
