@@ -64,13 +64,13 @@ def main_command(
     """
     # Select the compiler backend
     if dap:
-        from vp2py import VarphiToPythonCompiler
+        from vp2pydap import VarphiToPythonDAPCompiler
         compiler = VarphiToPythonDAPCompiler()
         compiler.set_source_path(str(input_file))
         if debug:
             typer.echo("Warning: --debug flag is ignored in DAP mode.", err=True)
     else:
-        from vp2pydap import VarphiToPythonDAPCompiler
+        from vp2py import VarphiToPythonCompiler
         compiler = VarphiToPythonCompiler()
         if debug:
             compiler.toggle_debug()
