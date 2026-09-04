@@ -8,7 +8,7 @@ app = typer.Typer(add_completion=False)
 
 def version_callback(value: bool):
     if value:
-        from . import __version__
+        from varphi_interpreter import __version__
 
         typer.echo(__version__)
         raise typer.Exit()
