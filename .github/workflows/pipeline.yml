@@ -114,10 +114,10 @@ jobs:
           uv run python -m PyInstaller --onefile \
             --name vpi \
             --icon="$ICON_FILE" \
-            --hidden-import "varphi_python.lib" \
-            --hidden-import "varphi_python_dap.lib" \
-            --collect-all "varphi_python" \
-            --collect-all "varphi_python_dap" \
+            --hidden-import "vp2py.lib" \
+            --hidden-import "vp2pydap.lib" \
+            --collect-all "vp2py" \
+            --collect-all "vp2pydap" \
             --clean \
             src/varphi_interpreter/cli.py
 
